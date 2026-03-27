@@ -171,7 +171,52 @@ configured with a user that has:
 
 \* bedrock:InvokeModelWithResponseStream
 
-🔑 **IAM Notes**
+📂 **Repository Structure**
+
+```text
+aws-bedrock-global-weather-agent/
+│── app.py
+│── requirements.txt
+│── README.md
+│── docs/
+│   ├── bedrock1.jpg
+│   ├── bedrock2.jpg
+│   ├── lambda.jpg
+│   ├── actiongroup1.jpg
+│   ├── actiongroup2.jpg
+│   ├── streamlit.jpg
+│── lambda/
+│── schemas/
+│── iam/
+```
+
+🔐 **IAM Security Design**
+
+This implementation uses two permission layers:
+
+**Local IAM User**
+
+Required for invoking the Bedrock Agent from local development environment:
+
+* bedrock:InvokeAgent
+* bedrock:InvokeModel
+* bedrock:InvokeModelWithResponseStream
+
+**Agent Execution Role**
+
+Attached to Bedrock Agent runtime for model invocation:
+
+* bedrock:InvokeModel
+* bedrock:InvokeModelWithResponseStream
+
+**Lambda Execution Role**
+
+Used for:
+
+* CloudWatch logging
+* outbound HTTPS API calls
+
+This separation follows least-privilege design.
 
 Local IAM User Requires
 ```json
@@ -230,6 +275,25 @@ Humidity: 68%
 Wind: 7 mph
 
 ```
+🏗️ **Architecture Flow**
+
+```text
+User Prompt
+   ↓
+Streamlit UI
+   ↓
+Amazon Bedrock Agent
+   ↓
+Action Group (WeatherTools)
+   ↓
+AWS Lambda
+   ↓
+Open-Meteo APIs
+   ↓
+Structured JSON Response
+   ↓
+Natural Language Answer
+```
 
 📸 **Screenshots**
 
@@ -246,17 +310,6 @@ Wind: 7 mph
 
 ![Bedrock Agent](docs/bedrock2.jpg)
 
-
-
-**Lambda Console**
-
-> Lambda tool implementation for external weather API execution and structured JSON response contract.
-
-
-![Lambda](docs/lambda.jpg)
-
-
-
 **Action group**
 
 
@@ -266,6 +319,14 @@ Wind: 7 mph
 
 
 ![Action group](docs/actiongroup2.jpg)
+
+
+**Lambda Console**
+
+> Lambda tool implementation for external weather API execution and structured JSON response contract.
+
+
+![Lambda](docs/lambda.jpg)
 
 
 
