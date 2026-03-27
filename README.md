@@ -315,9 +315,10 @@ This project demonstrates:
 
 \* Session-based conversational AI
 
- 🏆 Why This Project Matters
+🏆 Why This Project Matters
 
 This is not just a weather demo.
+
 It demonstrates the same pattern used in enterprise AI systems:
 
 \* control assistants
