@@ -116,19 +116,29 @@ Provides chat interface for local testing.
 \## app.py
 
 Handles:
+
 \* Streamlit chat UI
+
 \* Bedrock invoke\_agent call
+
 \* Session handling
 
 \## weather\_lambda.py
+
 Handles:
+
 \* parameter extraction
+
 \* external API calls
+
 \* weather normalization
 
 \## weather-openapi.json
+
 Defines:
+
 \* action group interface
+
 \* tool parameters
 
 \# 💻 Local Setup
