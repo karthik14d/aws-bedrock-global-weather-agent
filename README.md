@@ -1,10 +1,10 @@
-AWS Bedrock Global Weather Agent 🌦️
+**AWS Bedrock Global Weather Agent** 🌦️
 
 A production-style generative AI weather assistant built using \*\*Amazon Bedrock Agents\*\*, \*\*Amazon Nova\*\*, \*\*AWS Lambda\*\*, \*\*Open-Meteo APIs\*\*, and \*\*Streamlit\*\*.
 
 This project demonstrates how a large language model can dynamically invoke external tools to retrieve \*\*live weather data\*\* instead of relying on static model memory.
 
-🚀 What This Project Does
+🚀 **What This Project Does**
 
 A user asks a natural language question such as:
 
@@ -32,7 +32,7 @@ The system:
 7\. Bedrock formats the final natural language answer
 
 
-☁️ AWS Services Used
+☁️ **AWS Services Used**
 
 | Service        | Purpose                 |
 
@@ -49,7 +49,7 @@ The system:
 | CloudWatch     | Lambda logging          |
 
 
-🧠 Why Bedrock Agent Instead of Direct LLM Call
+🧠 **Why Bedrock Agent Instead of Direct LLM Call**
 
 A normal LLM cannot know live weather reliably.
 
@@ -61,7 +61,7 @@ Bedrock Agent adds:
 \* external API execution
 This enables \*\*live factual retrieval\*\*.
 
-🔧 Core Components
+🔧 **Core Components**
 1. Bedrock Agent
 Handles:
 \* user intent detection
@@ -111,9 +111,9 @@ Returns structured payload back to Bedrock.
 Provides chat interface for local testing.
 
 
-\# Code Walkthrough
+** Code Walkthrough**
 
-\## app.py
+**app.py**
 
 Handles:
 
@@ -123,7 +123,7 @@ Handles:
 
 \* Session handling
 
-\## weather\_lambda.py
+**weather\_lambda.py**
 
 Handles:
 
@@ -133,7 +133,7 @@ Handles:
 
 \* weather normalization
 
-\## weather-openapi.json
+**weather-openapi.json**
 
 Defines:
 
@@ -141,21 +141,21 @@ Defines:
 
 \* tool parameters
 
-💻 Local Setup
+💻** Local Setup**
 
-\## Install dependencies
+**Install dependencies**
 ```bash
 
 pip install -r requirements.txt
 
 ```
-\## Run Streamlit app
+**Run Streamlit app**
 ```bash
 
 streamlit run app.py
 
 ```
-🔐 AWS Credentials Required
+🔐** AWS Credentials Required**
 
 Local machine must already have:
 ```bash
@@ -171,8 +171,9 @@ configured with a user that has:
 
 \* bedrock:InvokeModelWithResponseStream
 
-\# 🔑 IAM Notes
-\## Local IAM User Requires
+🔑 **IAM Notes**
+
+Local IAM User Requires
 ```json
 
 {
@@ -188,7 +189,7 @@ configured with a user that has:
 
 ```
 
-\## Agent Execution Role Requires
+Agent Execution Role Requires
 ```json
 
 {
@@ -203,7 +204,7 @@ configured with a user that has:
 
 ```
 
-🧪 Example Prompt
+🧪** Example Prompt**
 
 
 
@@ -213,7 +214,7 @@ What is the weather in Tokyo?
 
 ```
 
-\## Example Response
+Example Response
 ```text
 
 Location: Tokyo
@@ -230,11 +231,11 @@ Wind: 7 mph
 
 ```
 
-📸 Screenshots
+📸 **Screenshots**
 
 
 
-\## Bedrock Agent
+**Bedrock Agent**
 
 
 
@@ -246,7 +247,7 @@ Wind: 7 mph
 
 
 
-\## Lambda Console
+**Lambda Console**
 
 
 
@@ -254,7 +255,7 @@ Wind: 7 mph
 
 
 
-\## Action group
+**Action group**
 
 
 
@@ -266,20 +267,20 @@ Wind: 7 mph
 
 
 
-\## Streamlit UI
+**Streamlit UI**
 
 
 
 ![Streamlit](docs/streamlit.jpg)
 
 
-⚠️ Troubleshooting
+⚠️ **Troubleshooting**
 
-\## AccessDeniedException
+AccessDeniedException
 
 Usually caused by missing IAM permission.
 
-\## Anthropic Model Failed
+Anthropic Model Failed
 
 Anthropic required AWS Marketplace permissions:
 
@@ -289,7 +290,7 @@ Anthropic required AWS Marketplace permissions:
 
 To avoid this, project was migrated to \*\*Amazon Nova\*\*.
 
-\## Alias Validation Error
+Alias Validation Error
 
 Ensure:
 ```python
@@ -299,7 +300,7 @@ AGENT\_ALIAS\_ID = "REAL\_ALIAS\_ID"
 ```
 Use alias ID, not alias name.
 
-🧭 Key Learning Outcomes
+🧭 **Key Learning Outcomes**
 
 This project demonstrates:
 
@@ -315,7 +316,7 @@ This project demonstrates:
 
 \* Session-based conversational AI
 
-🏆 Why This Project Matters
+🏆 **Why This Project Matters**
 
 This is not just a weather demo.
 
@@ -329,7 +330,7 @@ It demonstrates the same pattern used in enterprise AI systems:
 
 \* tool-driven enterprise GenAI
 
-👤 Author
+👤 **Author**
 
 Built as an applied learning project to explore practical Bedrock Agent orchestration, Lambda integration and external tool execution.
 
