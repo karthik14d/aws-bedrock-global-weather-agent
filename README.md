@@ -237,6 +237,7 @@ Wind: 7 mph
 
 **Bedrock Agent**
 
+> Bedrock agent configuration showing production-style action group orchestration and model selection.
 
 
 ![Bedrock Agent](docs/bedrock1.jpg)
@@ -249,6 +250,7 @@ Wind: 7 mph
 
 **Lambda Console**
 
+> Lambda tool implementation for external weather API execution and structured JSON response contract.
 
 
 ![Lambda](docs/lambda.jpg)
@@ -332,7 +334,8 @@ It demonstrates the same pattern used in enterprise AI systems:
 
 👤 **Author**
 
-Built as an applied learning project to explore practical Bedrock Agent orchestration, Lambda integration and external tool execution.
+Built as a practical Bedrock Agent implementation to explore real-world orchestration patterns involving foundation models, external tools, Lambda execution, and conversational UI integration.
+
 
 
 
