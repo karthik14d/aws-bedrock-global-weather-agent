@@ -49,410 +49,143 @@ The system:
 | CloudWatch     | Lambda logging          |
 
 
-
-\---
-
-
-
-\# 🧠 Why Bedrock Agent Instead of Direct LLM Call
-
-
+🧠 Why Bedrock Agent Instead of Direct LLM Call
 
 A normal LLM cannot know live weather reliably.
 
-
-
 Bedrock Agent adds:
 
-
-
 \* tool calling
-
 \* structured orchestration
-
 \* parameter extraction
-
 \* external API execution
-
-
-
 This enables \*\*live factual retrieval\*\*.
 
-
-
-\---
-
-
-
-\# 🔧 Core Components
-
-
-
-\## 1. Bedrock Agent
-
-
-
+🔧 Core Components
+1. Bedrock Agent
 Handles:
-
-
-
 \* user intent detection
-
 \* tool selection
-
 \* response orchestration
-
-
 
 Agent instruction defines:
 
-
-
 \* when to use tools
-
 \* how to format output
-
 \* unit preferences
 
-
-
-\---
-
-
-
-\## 2. Action Group
-
-
-
+2. Action Group
 Action group name:
-
-
-
 ```text
 
 WeatherTools
 
 ```
-
-
-
 Defines callable API contract through OpenAPI schema.
-
-
-
-\### Parameters
-
-
-
+\* Parameters
 \* location
-
 \* unit
 
-
-
-\---
-
-
-
-\## 3. AWS Lambda
-
-
-
+3. AWS Lambda
 Lambda performs:
-
-
-
-\### Step A — Geocoding
-
-
-
+Step A — Geocoding
 Converts city name:
-
-
-
 ```text
 
 Tokyo → latitude / longitude
 
 ```
-
-
-
-using Open-Meteo geocoding API.
-
-
-
-\### Step B — Weather Retrieval
-
-
-
+Using Open-Meteo geocoding API.
+Step B — Weather Retrieval
 Fetches:
-
-
-
 \* temperature
-
 \* feels like
-
 \* humidity
-
 \* wind
-
 \* condition
 
-
-
-\### Step C — JSON Response
-
-
-
+Step C — JSON Response
 Returns structured payload back to Bedrock.
 
-
-
-\---
-
-
-
-\## 4. Streamlit Frontend
-
-
-
+4. Streamlit Frontend
 Provides chat interface for local testing.
 
-
-
-\---
-
-
-
 \# Code Walkthrough
-
-
-
 \## app.py
-
-
-
 Handles:
-
-
-
 \* Streamlit chat UI
-
 \* Bedrock invoke\_agent call
-
 \* Session handling
 
-
-
 \## weather\_lambda.py
-
-
-
 Handles:
-
-
-
 \* parameter extraction
-
 \* external API calls
-
 \* weather normalization
 
-
-
 \## weather-openapi.json
-
-
-
 Defines:
-
-
-
 \* action group interface
-
 \* tool parameters
 
-
-
-\# 📂 Repository Structure
-
-
-
-```text
-
-aws-bedrock-global-weather-agent/
-
-│── README.md
-
-│── requirements.txt
-
-│── app.py
-
-│── lambda/
-
-│    └── weather\_lambda.py
-
-│── schemas/
-
-│    └── weather-openapi.json
-
-│── iam/
-
-│    └── sample-bedrock-policy.json
-
-│── docs/
-
-│    ├── architecture-diagram.png
-
-│    ├── aws-agent-console.png
-
-│    ├── lambda-console.png
-
-│    ├── streamlit-ui.png
-
-│    └── cli-test.png
-
-```
-
-
-
-\---
-
-
-
 \# 💻 Local Setup
-
-
-
 \## Install dependencies
-
-
-
 ```bash
 
 pip install -r requirements.txt
 
 ```
-
-
-
 \## Run Streamlit app
-
-
-
 ```bash
 
 streamlit run app.py
 
 ```
-
-
-
-\---
-
-
-
 \# 🔐 AWS Credentials Required
-
-
-
 Local machine must already have:
-
-
-
 ```bash
 
 aws configure
 
 ```
-
-
-
 configured with a user that has:
-
-
-
 \* bedrock:InvokeAgent
-
 \* bedrock:InvokeModel
-
 \* bedrock:InvokeModelWithResponseStream
 
-
-
-\---
-
-
-
 \# 🔑 IAM Notes
-
-
-
 \## Local IAM User Requires
-
-
-
 ```json
 
 {
 
-&#x20; "Effect": "Allow",
-
-&#x20; "Action": \[
-
-&#x20;   "bedrock:InvokeAgent",
-
-&#x20;   "bedrock:InvokeModel",
-
-&#x20;   "bedrock:InvokeModelWithResponseStream"
-
-&#x20; ],
-
-&#x20; "Resource": "\*"
-
+ "Effect": "Allow",
+ "Action": \[
+   "bedrock:InvokeAgent",
+   "bedrock:InvokeModel",
+   "bedrock:InvokeModelWithResponseStream"
+],
+ "Resource": "\*"
 }
 
 ```
-
-
-
-\---
-
-
 
 \## Agent Execution Role Requires
-
-
-
 ```json
 
 {
 
-&#x20; "Effect": "Allow",
-
-&#x20; "Action": \[
-
-&#x20;   "bedrock:InvokeModel",
-
-&#x20;   "bedrock:InvokeModelWithResponseStream"
-
-&#x20; ],
-
-&#x20; "Resource": "\*"
-
+ "Effect": "Allow",
+    "Action": \[
+    "bedrock:InvokeModel",
+    "bedrock:InvokeModelWithResponseStream"
+ ],
+ "Resource": "\*"
 }
 
 ```
 
-
-
-\---
-
-
-
-\# 🧪 Example Prompt
+🧪 Example Prompt
 
 
 
@@ -462,12 +195,7 @@ What is the weather in Tokyo?
 
 ```
 
-
-
 \## Example Response
-
-
-
 ```text
 
 Location: Tokyo
@@ -484,13 +212,7 @@ Wind: 7 mph
 
 ```
 
-
-
-\---
-
-
-
-\# 📸 Screenshots
+📸 Screenshots
 
 
 
@@ -540,131 +262,45 @@ Wind: 7 mph
 
 !\[CLI](docs/cli-test.png)
 
-
-
-\---
-
-
-
-\# ⚠️ Troubleshooting
-
-
-
+⚠️ Troubleshooting
 \## AccessDeniedException
-
-
-
 Usually caused by missing IAM permission.
 
-
-
-\---
-
-
-
 \## Anthropic Model Failed
-
-
-
 Anthropic required AWS Marketplace permissions:
-
-
-
 \* aws-marketplace:Subscribe
-
 \* aws-marketplace:ViewSubscriptions
-
-
-
 To avoid this, project was migrated to \*\*Amazon Nova\*\*.
 
-
-
-\---
-
-
-
 \## Alias Validation Error
-
-
-
 Ensure:
-
-
-
 ```python
 
 AGENT\_ALIAS\_ID = "REAL\_ALIAS\_ID"
 
 ```
-
-
-
 Use alias ID, not alias name.
 
-
-
-\---
-
-
-
-\# 🧭 Key Learning Outcomes
-
-
-
+🧭 Key Learning Outcomes
 This project demonstrates:
-
-
-
 \* Agentic AI architecture
-
 \* Tool invocation using Bedrock Agents
-
 \* Lambda event contract handling
-
 \* Live API integration
-
 \* Prompt + tool alignment
-
 \* Session-based conversational AI
 
-
-
-\---
-
-
-
-\# 🏆 Why This Project Matters
-
-
+ 🏆 Why This Project Matters
 
 This is not just a weather demo.
-
-
-
 It demonstrates the same pattern used in enterprise AI systems:
-
-
-
 \* control assistants
-
 \* operational copilots
-
 \* intelligent workflow agents
-
 \* tool-driven enterprise GenAI
 
-
-
-\---
-
-
-
-\# 👤 Author
-
-
-
-Built as an applied learning project to explore practical Bedrock Agent orchestration, Lambda integration, and external tool execution.
+👤 Author
+Built as an applied learning project to explore practical Bedrock Agent orchestration, Lambda integration and external tool execution.
 
 
 
