@@ -276,13 +276,13 @@ Wind: 7 mph
 
 ⚠️ **Troubleshooting**
 
-AccessDeniedException
+AccessDeniedException:
 
 Usually caused by missing IAM permission.
 
-Anthropic Model Failed
+Anthropic Model Failed:
 
-Anthropic required AWS Marketplace permissions:
+Anthropic required AWS Marketplace permissions
 
 \* aws-marketplace:Subscribe
 
@@ -290,7 +290,7 @@ Anthropic required AWS Marketplace permissions:
 
 To avoid this, project was migrated to \*\*Amazon Nova\*\*.
 
-Alias Validation Error
+Alias Validation Error:
 
 Ensure:
 ```python
