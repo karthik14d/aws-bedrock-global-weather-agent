@@ -1,0 +1,49 @@
+"openapi": "3.0.0",
+  "info": {
+    "title": "Weather API",
+    "version": "1.0.0",
+    "description": "API for retrieving live current weather for a location"
+  },
+  "paths": {
+    "/weather": {
+      "get": {
+        "operationId": "getWeather",
+        "description": "Get live current weather for a location",
+        "parameters": [
+          {
+            "name": "location",
+            "in": "query",
+            "description": "City or location name, for example Tokyo or London",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "unit",
+            "in": "query",
+            "description": "Temperature unit",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": ["C", "F"],
+              "default": "F"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful weather response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
