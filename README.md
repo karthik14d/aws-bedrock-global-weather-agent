@@ -32,13 +32,7 @@ The system:
 7\. Bedrock formats the final natural language answer
 
 
-
-\---
-
-
-\# ☁️ AWS Services Used
-
-
+☁️ AWS Services Used
 
 | Service        | Purpose                 |
 
