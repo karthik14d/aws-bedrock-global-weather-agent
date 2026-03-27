@@ -1,38 +1,12 @@
-\# AWS Bedrock Global Weather Agent 🌦️
-
-
-
-!\[AWS](https://img.shields.io/badge/AWS-Bedrock-orange)
-
-!\[Python](https://img.shields.io/badge/Python-3.11-blue)
-
-!\[Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
-
-!\[Lambda](https://img.shields.io/badge/Compute-AWS%20Lambda-yellow)
-
-!\[Status](https://img.shields.io/badge/Status-Working-success)
-
-
+AWS Bedrock Global Weather Agent 🌦️
 
 A production-style generative AI weather assistant built using \*\*Amazon Bedrock Agents\*\*, \*\*Amazon Nova\*\*, \*\*AWS Lambda\*\*, \*\*Open-Meteo APIs\*\*, and \*\*Streamlit\*\*.
 
-
-
 This project demonstrates how a large language model can dynamically invoke external tools to retrieve \*\*live weather data\*\* instead of relying on static model memory.
 
-
-
-\---
-
-
-
-\# 🚀 What This Project Does
-
-
+🚀 What This Project Does
 
 A user asks a natural language question such as:
-
-
 
 ```text
 
@@ -40,10 +14,7 @@ What is the weather in Tokyo?
 
 ```
 
-
-
 The system:
-
 
 
 1\. Sends the prompt to an Amazon Bedrock Agent
