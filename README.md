@@ -238,11 +238,11 @@ Wind: 7 mph
 
 
 
-!\[Bedrock Agent](docs/bedrock1.jpg)
+!\[Bedrock Agent](./docs/bedrock1.jpg)
 
 
 
-!\[Bedrock Agent](docs/bedrock2.jpg)
+!\[Bedrock Agent](./docs/bedrock2.jpg)
 
 
 
@@ -250,7 +250,7 @@ Wind: 7 mph
 
 
 
-!\[Lambda](docs/lambda.jpg)
+!\[Lambda](./docs/lambda.jpg)
 
 
 
@@ -258,11 +258,11 @@ Wind: 7 mph
 
 
 
-!\[Action gorup](docs/actiongroup1.jpg)
+!\[Action gorup](./docs/actiongroup1.jpg)
 
 
 
-!\[Action group](docs/actiongroup2.jpg)
+!\[Action group](./docs/actiongroup2.jpg)
 
 
 
@@ -270,7 +270,7 @@ Wind: 7 mph
 
 
 
-!\[Streamlit](docs/streamlit.jpg)
+!\[Streamlit](./docs/streamlit.jpg)
 
 
 ⚠️ Troubleshooting
