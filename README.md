@@ -1,10 +1,9 @@
 **AWS Bedrock Global Weather Agent** 🌦️
 
-![AWS](https://img.shields.io/badge/AWS-Bedrock-orange)
+![AWS Bedrock](https://img.shields.io/badge/Amazon_Bedrock-Agentic_AI-orange)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
-![Lambda](https://img.shields.io/badge/Compute-Lambda-yellow)
-![Status](https://img.shields.io/badge/Status-Working-brightgreen)
+![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-yellow)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
 
 
 A production-style generative AI weather assistant built using **Amazon Bedrock Agents**, **Amazon Nova**, **AWS Lambda**, **Open-Meteo APIs** and **Streamlit**.
@@ -358,7 +357,7 @@ Anthropic required AWS Marketplace permissions
 
 \* aws-marketplace:ViewSubscriptions
 
-To avoid this, project was migrated to \*\*Amazon Nova\*\*.
+To avoid this, project was migrated to **Amazon Nova**.
 
 Alias Validation Error:
 
