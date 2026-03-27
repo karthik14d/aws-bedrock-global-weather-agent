@@ -1,8 +1,8 @@
 **AWS Bedrock Global Weather Agent** 🌦️
 
-A production-style generative AI weather assistant built using \*\*Amazon Bedrock Agents\*\*, \*\*Amazon Nova\*\*, \*\*AWS Lambda\*\*, \*\*Open-Meteo APIs\*\*, and \*\*Streamlit\*\*.
+A production-style generative AI weather assistant built using **Amazon Bedrock Agents**, **Amazon Nova**, **AWS Lambda**, **Open-Meteo APIs** and **Streamlit**.
 
-This project demonstrates how a large language model can dynamically invoke external tools to retrieve \*\*live weather data\*\* instead of relying on static model memory.
+This project demonstrates how a large language model can dynamically invoke external tools to retrieve **live weather data** instead of relying on static model memory.
 
 🚀 **What This Project Does**
 
