@@ -160,12 +160,12 @@ configured with a user that has:
 {
 
  "Effect": "Allow",
- "Action": \[
+ "Action": [
    "bedrock:InvokeAgent",
    "bedrock:InvokeModel",
    "bedrock:InvokeModelWithResponseStream"
 ],
- "Resource": "\*"
+ "Resource": "*"
 }
 
 ```
@@ -176,11 +176,11 @@ configured with a user that has:
 {
 
  "Effect": "Allow",
-    "Action": \[
+    "Action": [
     "bedrock:InvokeModel",
     "bedrock:InvokeModelWithResponseStream"
  ],
- "Resource": "\*"
+ "Resource": "*"
 }
 
 ```
