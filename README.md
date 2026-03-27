@@ -289,6 +289,7 @@ Usually caused by missing IAM permission.
 \## Anthropic Model Failed
 
 Anthropic required AWS Marketplace permissions:
+
 \* aws-marketplace:Subscribe
 \* aws-marketplace:ViewSubscriptions
 To avoid this, project was migrated to \*\*Amazon Nova\*\*.
@@ -304,7 +305,9 @@ AGENT\_ALIAS\_ID = "REAL\_ALIAS\_ID"
 Use alias ID, not alias name.
 
 🧭 Key Learning Outcomes
+
 This project demonstrates:
+
 \* Agentic AI architecture
 \* Tool invocation using Bedrock Agents
 \* Lambda event contract handling
