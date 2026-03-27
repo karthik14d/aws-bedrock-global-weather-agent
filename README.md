@@ -281,16 +281,20 @@ Wind: 7 mph
 !\[CLI](docs/cli-test.png)
 
 ⚠️ Troubleshooting
+
 \## AccessDeniedException
+
 Usually caused by missing IAM permission.
 
 \## Anthropic Model Failed
+
 Anthropic required AWS Marketplace permissions:
 \* aws-marketplace:Subscribe
 \* aws-marketplace:ViewSubscriptions
 To avoid this, project was migrated to \*\*Amazon Nova\*\*.
 
 \## Alias Validation Error
+
 Ensure:
 ```python
 
@@ -312,6 +316,7 @@ This project demonstrates:
 
 This is not just a weather demo.
 It demonstrates the same pattern used in enterprise AI systems:
+
 \* control assistants
 \* operational copilots
 \* intelligent workflow agents
@@ -319,6 +324,7 @@ It demonstrates the same pattern used in enterprise AI systems:
 
 👤 Author
 Built as an applied learning project to explore practical Bedrock Agent orchestration, Lambda integration and external tool execution.
+
 
 
 
