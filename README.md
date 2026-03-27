@@ -111,7 +111,7 @@ Returns structured payload back to Bedrock.
 Provides chat interface for local testing.
 
 
-** Code Walkthrough**
+**Code Walkthrough**
 
 **app.py**
 
