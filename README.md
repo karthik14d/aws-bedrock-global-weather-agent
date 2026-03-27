@@ -141,21 +141,21 @@ Defines:
 
 \* tool parameters
 
-💻** Local Setup**
+💻**Local Setup**
 
-**Install dependencies**
+Install dependencies
 ```bash
 
 pip install -r requirements.txt
 
 ```
-**Run Streamlit app**
+Run Streamlit app
 ```bash
 
 streamlit run app.py
 
 ```
-🔐** AWS Credentials Required**
+🔐**AWS Credentials Required**
 
 Local machine must already have:
 ```bash
