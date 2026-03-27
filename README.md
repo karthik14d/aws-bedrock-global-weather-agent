@@ -273,13 +273,6 @@ Wind: 7 mph
 !\[Streamlit](docs/streamlit.jpg)
 
 
-
-\## PowerShell Invoke Test
-
-
-
-!\[CLI](docs/cli-test.png)
-
 ⚠️ Troubleshooting
 
 \## AccessDeniedException
@@ -336,6 +329,7 @@ It demonstrates the same pattern used in enterprise AI systems:
 \* tool-driven enterprise GenAI
 
 👤 Author
+
 Built as an applied learning project to explore practical Bedrock Agent orchestration, Lambda integration and external tool execution.
 
 
