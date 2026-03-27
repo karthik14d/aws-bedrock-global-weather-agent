@@ -110,8 +110,11 @@ Returns structured payload back to Bedrock.
 4. Streamlit Frontend
 Provides chat interface for local testing.
 
+
 \# Code Walkthrough
+
 \## app.py
+
 Handles:
 \* Streamlit chat UI
 \* Bedrock invoke\_agent call
