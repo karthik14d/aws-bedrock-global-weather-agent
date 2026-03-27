@@ -65,63 +65,6 @@ The system:
 \---
 
 
-
-\# 🏗️ Architecture
-
-
-
-!\[Architecture](docs/architecture-diagram.png)
-
-
-
-\## End-to-End Flow
-
-
-
-```text
-
-User Prompt
-
-&#x20;  ↓
-
-Streamlit Frontend
-
-&#x20;  ↓
-
-Amazon Bedrock Agent
-
-&#x20;  ↓
-
-Action Group (WeatherTools)
-
-&#x20;  ↓
-
-AWS Lambda
-
-&#x20;  ↓
-
-Open-Meteo Geocoding API
-
-&#x20;  ↓
-
-Open-Meteo Weather API
-
-&#x20;  ↓
-
-Structured JSON Response
-
-&#x20;  ↓
-
-Amazon Nova Final Response
-
-```
-
-
-
-\---
-
-
-
 \# ☁️ AWS Services Used
 
 
