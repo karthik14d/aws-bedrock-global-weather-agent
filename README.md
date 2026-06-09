@@ -75,13 +75,17 @@ This enables \*\*live factual retrieval\*\*.
 1. Bedrock Agent
 Handles:
 \* user intent detection
+
 \* tool selection
+
 \* response orchestration
 
 Agent instruction defines:
 
 \* when to use tools
+
 \* how to format output
+
 \* unit preferences
 
 2. Action Group
@@ -93,7 +97,9 @@ WeatherTools
 ```
 Defines callable API contract through OpenAPI schema.
 \* Parameters
+
 \* location
+
 \* unit
 
 3. AWS Lambda
@@ -109,9 +115,13 @@ Using Open-Meteo geocoding API.
 Step B — Weather Retrieval
 Fetches:
 \* temperature
+
 \* feels like
+
 \* humidity
+
 \* wind
+
 \* condition
 
 Step C — JSON Response
