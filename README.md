@@ -346,9 +346,8 @@ Anthropic Model Failed:
 
 Anthropic required AWS Marketplace permissions
 
-\* aws-marketplace:Subscribe
-
-\* aws-marketplace:ViewSubscriptions
+* aws-marketplace:Subscribe
+* aws-marketplace:ViewSubscriptions
 
 To avoid this, project was migrated to **Amazon Nova**.
 
@@ -366,17 +365,12 @@ Use alias ID, not alias name.
 
 This project demonstrates:
 
-\* Agentic AI architecture
-
-\* Tool invocation using Bedrock Agents
-
-\* Lambda event contract handling
-
-\* Live API integration
-
-\* Prompt + tool alignment
-
-\* Session-based conversational AI
+* Agentic AI architecture
+* Tool invocation using Bedrock Agents
+* Lambda event contract handling
+* Live API integration
+* Prompt + tool alignment
+* Session-based conversational AI
 
 🏆 **Why This Project Matters**
 
@@ -384,13 +378,10 @@ This is not just a weather demo.
 
 It demonstrates the same pattern used in enterprise AI systems:
 
-\* control assistants
-
-\* operational copilots
-
-\* intelligent workflow agents
-
-\* tool-driven enterprise GenAI
+* control assistants
+* operational copilots
+* intelligent workflow agents
+* tool-driven enterprise GenAI
 
 👤 **Author**
 
