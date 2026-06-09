@@ -71,19 +71,14 @@ This enables \*\*live factual retrieval\*\*.
 🔧 **Core Components**
 1. Bedrock Agent
 Handles:
-\* user intent detection
-
-\* tool selection
-
-\* response orchestration
+* user intent detection
+* tool selection
+* response orchestration
 
 Agent instruction defines:
-
-\* when to use tools
-
-\* how to format output
-
-\* unit preferences
+* when to use tools
+* how to format output
+* unit preferences
 
 2. Action Group
 Action group name:
@@ -93,11 +88,9 @@ WeatherTools
 
 ```
 Defines callable API contract through OpenAPI schema.
-\* Parameters
-
-\* location
-
-\* unit
+* Parameters
+* location
+* unit
 
 3. AWS Lambda
 Lambda performs:
@@ -111,15 +104,11 @@ Tokyo → latitude / longitude
 Using Open-Meteo geocoding API.
 Step B — Weather Retrieval
 Fetches:
-\* temperature
-
-\* feels like
-
-\* humidity
-
-\* wind
-
-\* condition
+* temperature
+* feels like
+* humidity
+* wind
+* condition
 
 Step C — JSON Response
 Returns structured payload back to Bedrock.
@@ -134,29 +123,24 @@ Provides chat interface for local testing.
 
 Handles:
 
-\* Streamlit chat UI
-
-\* Bedrock invoke\_agent call
-
-\* Session handling
+* Streamlit chat UI
+* Bedrock invoke\_agent call
+* Session handling
 
 **weather\_lambda.py**
 
 Handles:
 
-\* parameter extraction
-
-\* external API calls
-
-\* weather normalization
+* parameter extraction
+* external API calls
+* weather normalization
 
 **weather-openapi.json**
 
 Defines:
 
-\* action group interface
-
-\* tool parameters
+* action group interface
+* tool parameters
 
 💻**Local Setup**
 
