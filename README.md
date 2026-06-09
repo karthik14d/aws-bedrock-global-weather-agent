@@ -62,9 +62,13 @@ A normal LLM cannot know live weather reliably.
 Bedrock Agent adds:
 
 \* tool calling
+
 \* structured orchestration
+
 \* parameter extraction
+
 \* external API execution
+
 This enables \*\*live factual retrieval\*\*.
 
 🔧 **Core Components**
