@@ -166,11 +166,9 @@ aws configure
 ```
 configured with a user that has:
 
-\* bedrock:InvokeAgent
-
-\* bedrock:InvokeModel
-
-\* bedrock:InvokeModelWithResponseStream
+* bedrock:InvokeAgent
+* bedrock:InvokeModel
+* bedrock:InvokeModelWithResponseStream
 
 📂 **Repository Structure**
 
