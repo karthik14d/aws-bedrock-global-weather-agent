@@ -66,7 +66,7 @@ Bedrock Agent adds:
 * parameter extraction
 * external API execution
 
-This enables \*\*live factual retrieval\*\*.
+This enables **live factual retrieval**.
 
 🔧 **Core Components**
 1. Bedrock Agent
